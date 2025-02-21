@@ -30,7 +30,7 @@ module.exports = (env, argv) => {
     ],
     devServer: {
       open: true,
-      port: 3001,
+      port: 3069,
       compress: true,
       hot: true, // Enable HMR
       watchFiles: ['src/**/*'], // Watch all files in src directory
