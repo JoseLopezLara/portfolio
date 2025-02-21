@@ -14,6 +14,16 @@
     <!-- -------- MAIN SECTION -------- -->
     <!-- -------- MAIN SECTION -------- -->
     <div class="w-full sm:w-11/12 md:w-10/12 container sm:mx-auto px-4 py-16">
+        <!-- Add this new nav bar section -->
+        <div class="flex lg:hidden justify-end  space-x-1.5">
+            <a href="blog.html" class="px-4 py-2 text-green-400 hover:text-white hover:bg-gray-700 rounded-lg transition duration-300">
+                <i class="fas fa-blog mr-2"></i>Mi Blog
+            </a>
+            <a href="curso-git.html" class="px-4 py-2 text-green-400 hover:text-white hover:bg-gray-700 rounded-lg transition duration-300">
+                <i class="fab fa-git-alt mr-2"></i>Curso Git
+            </a>
+        </div>
+        
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <!-- -------- IMAGE PROFILE INFORMATION SECTION -------- -->
             <!-- -------- IMAGE PROFILE INFORMATION SECTION -------- -->
@@ -167,7 +177,7 @@
             <!-- -------- CURRICULUM SECTION -------- -->
             <div class="lg:col-span-2">
                 <!-- Add this new nav bar section -->
-                <div class="flex justify-end mb-6 space-x-4">
+                <div class="hidden lg:flex justify-end mb-6 space-x-4">
                     <a href="blog.html" class="px-4 py-2 text-green-400 hover:text-white hover:bg-gray-700 rounded-lg transition duration-300">
                         <i class="fas fa-blog mr-2"></i>Mi Blog
                     </a>
