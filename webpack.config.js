@@ -20,11 +20,19 @@ module.exports = (env, argv) => {
         filename: 'index.html',
         inject: 'body', 
       }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src/curso-git.html'),
+        filename: 'curso-git.html',
+        inject: 'body',
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src/blog.html'),
+        filename: 'blog.html',
+        inject: 'body',
+      }),
       new CopyPlugin({
         patterns: [
           { from: 'src/assets', to: 'assets' },
-          { from: 'src/blog.html', to: 'blog.html' },
-          { from: 'src/curso-git.html', to: 'curso-git.html' }
         ],
       }),
     ],

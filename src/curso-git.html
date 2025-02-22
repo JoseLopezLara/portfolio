@@ -1,24 +1,229 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso Git - José Lopez Lara</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-gray-900 text-white font-mono">
-    <div class="container mx-auto px-4 py-16">
-        <div class="flex justify-between items-center mb-8">
-            <h1 class="text-3xl font-bold">Curso Git</h1>
-            <a href="../index.html" class="text-green-400 hover:text-white">
-                <i class="fas fa-arrow-left mr-2"></i>Volver
-            </a>
-        </div>
-        <div class="text-center py-16">
-            <h2 class="text-2xl font-bold mb-4">Próximamente</h2>
-            <p class="text-gray-400">El curso está en desarrollo...</p>
+
+<body class="bg-gray-900 text-white font-mono min-h-screen flex flex-col" x-data="{ 
+    videoPlayer: null,
+    seekTo(time) {
+        const seconds = this.timeToSeconds(time);
+        if (this.videoPlayer) {
+            this.videoPlayer.contentWindow.postMessage(JSON.stringify({
+                'event': 'command',
+                'func': 'seekTo',
+                'args': [seconds, true]
+            }), '*');
+        }
+    },
+    timeToSeconds(timeStr) {
+        const [minutes, seconds] = timeStr.split(':').map(Number);
+        return minutes * 60 + seconds;
+    },
+    initVideo() {
+        this.videoPlayer = document.querySelector('iframe');
+    }
+}" x-init="initVideo()">
+
+    <!-- -------- MAIN SECTION -------- -->
+    <!-- -------- MAIN SECTION -------- -->
+    <div class="flex-grow w-full sm:w-11/12 md:w-10/12 container sm:mx-auto px-4">
+        <div class="container mx-auto px-4 py-16">
+            <!-- -------- NAV BAR -------- -->
+            <!-- -------- NAV BAR -------- -->
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-3xl font-bold">Curso Git</h1>
+                <a href="../index.html" class="text-green-400 hover:text-white">
+                    <i class="fas fa-arrow-left mr-2"></i>Volver
+                </a>
+            </div>
+
+            <!-- -------- CONTENT SECTION -------- -->
+            <!-- -------- CONTENT SECTION -------- -->
+            <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <div class="bg-gray-800 rounded-lg p-6 shadow-lg mb-6">
+
+                        <!-- Video Container -->
+                        <div class="bg-gray-800 rounded-lg -m-2 overflow-hidden shadow-sm mb-6">
+                            <div class="relative w-full" style="padding-top: 56.25%;">
+                                <iframe class="absolute top-0 left-0 w-full h-full"
+                                    src="https://www.youtube.com/embed/3DMOBCdM-wA?enablejsapi=1" title="Curso Git" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <!-- Video Info -->
+                        <h2 class="text-2xl font-bold mb-4">Masterclass Git: De Junior a Senior</h2>
+                        <div class="flex flex-wrap gap-4 mb-4 text-sm text-gray-400">
+                            <span class="flex items-center">
+                                <i class="far fa-clock mr-2 text-green-400"></i>
+                                Duración: 2h 25min
+                            </span>
+                            <span class="flex items-center">
+                                <i class="far fa-calendar-alt mr-2 text-green-400"></i>
+                                Actualizado: Febrero 2025
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-signal mr-2 text-green-400"></i>
+                                Nivel: Principiante a Intermedio
+                            </span>
+                        </div>
+                        <p class="text-gray-400 mb-6">
+                            Curso práctico 
+                            "Git, GitHub y Gitflow | Curso Práctico para el Trabajo en Colaborativo desde CERO para PRINCIPIANTES | 2025", 
+                            donde aprenderás desde lo más básico hasta técnicas intermedias para gestionar proyectos en equipo. 
+                            Descubre cómo dominar Git Flow, asegurar tu cuenta con SSH y resolver conflictos de manera profesional
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-green-400 text-sm">
+                                <i class="fab fa-git-alt mr-1"></i>Git
+                            </span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-green-400 text-sm">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-green-400 text-sm">
+                                <i class="fas fa-code-branch mr-1"></i>GitFlow
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Table -->
+                <div class="lg:col-span-1">
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-list-ul text-green-400 mr-2"></i>
+                            Contenido
+                        </h3>
+                        <div class="space-y-4">
+                            <!-- Content Items -->
+                            <a href="#" @click.prevent="seekTo('0:00')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                <div class="flex justify-between items-start">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
+                                        <div>
+                                            <h4 class="font-medium">🌿 Git Flow: La Base del Éxito</h4>
+                                            <p class="text-sm text-gray-400">Domina el flujo de trabajo que usan los profesionales</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-400">0:00</span>
+                                </div>
+                            </a>
+
+                            <a href="#" @click.prevent="seekTo('49:59')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                <div class="flex justify-between items-start">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
+                                        <div>
+                                            <h4 class="font-medium">🔐 Securiza tu GitHub</h4>
+                                            <p class="text-sm text-gray-400">Configura SSH para una conexión segura y eficiente</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-400">49:59</span>
+                                </div>
+                            </a>
+
+                            <a href="#" @click.prevent="seekTo('1:17:58')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                <div class="flex justify-between items-start">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
+                                        <div>
+                                            <h4 class="font-medium">📥 Clonación Profesional</h4>
+                                            <p class="text-sm text-gray-400">Inicia tu feature branch como un experto</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-400">1:17:58</span>
+                                </div>
+                            </a>
+
+                            <a href="#" @click.prevent="seekTo('1:28:54')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                <div class="flex justify-between items-start">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
+                                        <div>
+                                            <h4 class="font-medium">💻 Workflow en Acción</h4>
+                                            <p class="text-sm text-gray-400">Técnicas para mantener tu progreso seguro</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-400">1:28:54</span>
+                                </div>
+                            </a>
+
+                            <a href="#" @click.prevent="seekTo('1:33:42')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                <div class="flex justify-between items-start">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
+                                        <div>
+                                            <h4 class="font-medium">🔄 Merge Limpio a Dev</h4>
+                                            <p class="text-sm text-gray-400">Fusión perfecta sin complicaciones</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-400">1:33:42</span>
+                                </div>
+                            </a>
+
+                            <a href="#" @click.prevent="seekTo('1:41:26')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                <div class="flex justify-between items-start">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
+                                        <div>
+                                            <h4 class="font-medium">⚡ Conflictos Parte 1</h4>
+                                            <p class="text-sm text-gray-400">Perspectiva del primer desarrollador</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-400">1:41:26</span>
+                                </div>
+                            </a>
+
+                            <a href="#" @click.prevent="seekTo('1:51:48')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                <div class="flex justify-between items-start">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
+                                        <div>
+                                            <h4 class="font-medium">⚡ Conflictos Parte 2</h4>
+                                            <p class="text-sm text-gray-400">Perspectiva del segundo desarrollador</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-400">1:51:48</span>
+                                </div>
+                            </a>
+
+                            <a href="#" @click.prevent="seekTo('2:04:45')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                <div class="flex justify-between items-start">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
+                                        <div>
+                                            <h4 class="font-medium">🎯 Resolución Maestra</h4>
+                                            <p class="text-sm text-gray-400">Domina la solución de conflictos como un pro</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-400">2:04:45</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- -------- FOOTER SECTION -------- -->
+    <!-- -------- FOOTER SECTION -------- -->
+    <footer class="bg-gray-800 text-center py-4 mt-8">
+        <div class="container mx-auto px-4">
+            <p class="text-gray-500 text-sm">© 2025 - jose.lopez.lara.cto@gmail.com</p>
+        </div>
+    </footer>
 </body>
+
 </html>
