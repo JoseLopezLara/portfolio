@@ -16,14 +16,18 @@
     <div class="w-full sm:w-11/12 md:w-10/12 container sm:mx-auto px-4 py-16">
         <!-- Add this new nav bar section -->
         <div class="flex lg:hidden justify-end  space-x-1.5">
-            <a href="blog.html" class="px-4 py-2 text-green-400 hover:text-white hover:bg-gray-700 rounded-lg transition duration-300">
+            <!--TODO: UNCOMMENT WHEN YOU IMPLEMENT THE BLOG-->
+            <!-- <a href="blog.html" class="px-4 py-2 text-green-400 hover:text-white hover:bg-gray-700 rounded-lg transition duration-300">
                 <i class="fas fa-blog mr-2"></i>Mi Blog
-            </a>
-            <a href="curso-git.html" class="px-4 py-2 text-green-400 hover:text-white hover:bg-gray-700 rounded-lg transition duration-300">
-                <i class="fab fa-git-alt mr-2"></i>Curso Git
-            </a>
+            </a> -->
+            <button class="mb-6 transform hover:scale-105 transition-transform duration-100">
+                <a href="curso-git.html"
+                    class=" border-4 border-yellow-800 border-opacity-50 bg-yellow-800 bg-opacity-10 p-6 mb-6 shadow-2xl px-4 py-2 text-green-400 hover:text-white hover:bg-yellow-700 hover:bg-opacity-10 rounded-lg transition duration-300">
+                    <i class="fab fa-git-alt mr-2"></i>Mi Curso gratuito de Git
+                </a>
+            </button>
         </div>
-        
+
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <!-- -------- IMAGE PROFILE INFORMATION SECTION -------- -->
             <!-- -------- IMAGE PROFILE INFORMATION SECTION -------- -->
@@ -178,12 +182,17 @@
             <div class="lg:col-span-2">
                 <!-- Add this new nav bar section -->
                 <div class="hidden lg:flex justify-end mb-6 space-x-4">
-                    <a href="blog.html" class="px-4 py-2 text-green-400 hover:text-white hover:bg-gray-700 rounded-lg transition duration-300">
+                    <!--TODO: UNCOMMENT WHEN YOU IMPLEMENT THE BLOG-->
+                    <!-- <a href="blog.html" class="px-4 py-2 text-green-400 hover:text-white hover:bg-gray-700 rounded-lg transition duration-300">
                         <i class="fas fa-blog mr-2"></i>Mi Blog
-                    </a>
-                    <a href="curso-git.html" class="px-4 py-2 text-green-400 hover:text-white hover:bg-gray-700 rounded-lg transition duration-300">
-                        <i class="fab fa-git-alt mr-2"></i>Curso Git
-                    </a>
+                    </a> -->
+                    <button class="mb-3 transform hover:scale-105 transition-transform duration-100">
+                        <a href="curso-git.html"
+                            class=" border-4 border-yellow-800 border-opacity-50 bg-yellow-800 bg-opacity-10 p-6 mb-6 shadow-2xl px-4 py-2 text-green-400 hover:text-white hover:bg-yellow-700 hover:bg-opacity-10 rounded-lg transition duration-300">
+                            <i class="fab fa-git-alt mr-2"></i>Mi Curso gratuito de Git
+                        </a>
+                    </button>
+
                 </div>
 
                 <!-- Original Experience section -->
@@ -198,7 +207,8 @@
                         <div class="grid grid-cols-1 md:grid-cols-10 gap-6">
                             <!-- CV Section -->
                             <div class="md:col-span-6 2xl:col-span-5 border-r-0 md:border-r-2 border-blue-900 pr-4">
-                                <h4 class="underline underline-offset-4 font-extrabold shadow-2xl text-gray-800 text-xl mb-2 flex items-center justify-center">
+                                <h4
+                                    class="underline underline-offset-4 font-extrabold shadow-2xl text-gray-800 text-xl mb-2 flex items-center justify-center">
                                     <i class="fas fa-file-alt mr-2"></i>
                                     Curriculum Vitae
                                 </h4>
@@ -206,17 +216,16 @@
                                     <p class="text-gray-800 font-semibold">Descarga mi CV en diferentes formatos</p>
                                     <p class="text-gray-700 text-sm italic">Actualizado: 1 de Febrero, 2025</p>
                                 </div>
-                                <div class="flex flex-col sm:flex-row justify-center text-center text-sm space-y-3 sm:space-y-0 sm:space-x-4">
+                                <div
+                                    class="flex flex-col sm:flex-row justify-center text-center text-sm space-y-3 sm:space-y-0 sm:space-x-4">
                                     <a href="https://drive.google.com/file/d/1QPRs5Y_GUYHmdzPbvJI5vw0p1EpZsMN1/view?usp=sharing"
-                                        target="_blank" 
-                                        rel="noopener noreferrer" 
+                                        target="_blank" rel="noopener noreferrer"
                                         class="transform hover:scale-105 transition-transform duration-300 flex items-center justify-center px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg border-2 border-gray-800 shadow-lg">
                                         <i class="fas fa-image mr-2"></i>
                                         CV con Imagen
                                     </a>
                                     <a href="https://drive.google.com/file/d/1L29qnybsI7CjMdcEp1p5n_BEDG-pxjtU/view?usp=sharing"
-                                        target="_blank" 
-                                        rel="noopener noreferrer"
+                                        target="_blank" rel="noopener noreferrer"
                                         class="transform hover:scale-105 transition-transform duration-300 flex items-center justify-center px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg border-2 border-gray-800 shadow-lg">
                                         <i class="fas fa-file-pdf mr-2"></i>
                                         CV F. Harvard
@@ -226,17 +235,21 @@
 
                             <!-- Git Training Section -->
                             <div class="md:col-span-4 2xl:col-span-5 pl-4">
-                                <h4 class="underline underline-offset-4 font-extrabold shadow-2xl text-gray-800 text-xl mb-2 flex items-center justify-center">
+                                <h4
+                                    class="underline underline-offset-4 font-extrabold shadow-2xl text-gray-800 text-xl mb-2 flex items-center justify-center">
                                     <i class="fab fa-git-alt mr-2"></i>
                                     Asesorías Git
                                 </h4>
                                 <div class="text-center mb-4">
-                                    <p class="text-gray-800 font-semibold">Capacitación Git para individuos y equipos</p>
+                                    <p class="text-gray-800 font-semibold">Capacitación Git para individuos y equipos
+                                    </p>
                                     <div class="mt-4 space-y-2">
-                                        <p class="text-gray-800"><i class="fas fa-user mr-2"></i>Individual: $14 USD/hora</p>
-                                        <p class="text-gray-800"><i class="fas fa-users mr-2"></i>Equipos: Precio por contacto</p>
+                                        <p class="text-gray-800"><i class="fas fa-user mr-2"></i>Individual: $12
+                                            USD/hora</p>
+                                        <p class="text-gray-800"><i class="fas fa-users mr-2"></i>Equipos: Precio por
+                                            contacto</p>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -249,24 +262,66 @@
                     <div class="bg-gray-800 rounded-lg p-6 mb-6 shadow-lg">
                         <h4 class="text-xl font-bold mb-2 flex items-center">
                             <i class="fas fa-flask mr-2 text-green-400"></i>
+                            Gob. Digital, Secretaría de Finanzas y Administración
+                        </h4>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="w-11/12 md:w-7/12">
+                                <div class="flex justify-start mt-1">
+                                    <p href="curso-git.html"
+                                        class=" w-fit text-right border-2 border-yellow-800 border-opacity-50 bg-yellow-800 bg-opacity-10 px-3 py-1.5 text-xs font-light mb-1 shadow-2xl  text-green-400 rounded-lg">
+                                        <i class="fa-solid fa-user-tie mr-2"></i>Trabajo actual
+                                    </p>
+                                </div>
+                                <p class="text-green-400">Desarrollador Backend Laravel</p>
+                                <p class="text-gray-400 text-sm">
+                                    <i class="far fa-calendar-alt fa-sm text-green-400 mr-2"></i> Febrero 2025 | Mi
+                                    trabajo Actual
+                                </p>
+                                <ul class="list-disc list-inside pl-4 mt-4 text-gray-400">
+                                    <span class="inline-block mb-4">Desarrollador Backend Laravel a tiempo completo,
+                                        trabajando en equipo para la creación y desarrollo de APIs RESTful.</span>
+
+                                </ul>
+                            </div>
+                            <div class="md:w-5/12 px-10 min-h-[200px] flex items-center justify-center ">
+                                <img src="assets/images/GDSFA.png" alt="ITM Logo"
+                                    class="object-contain xl:w-7/12 lg:w-9/12 md:w-9/12 w-4/12 h-4/12  rounded-3xl p-2 bg-white">
+                            </div>
+                        </div>
+
+                        <!-- <div class="w-full flex justify-end pr-8">
+                            <a class="w-full underline underline-offset-4 text-right text-blue-400 hover:text-blue-500 font-bold"
+                                href=""
+                                target="_blank" 
+                                rel="noopener noreferrer">Visita el Proyecto</a>
+                        </div> -->
+                    </div>
+
+                    <!--Depto. de Investigación, ITM-->
+                    <div class="bg-gray-800 rounded-lg p-6 mb-6 shadow-lg">
+                        <h4 class="text-xl font-bold mb-2 flex items-center">
+                            <i class="fas fa-flask mr-2 text-green-400"></i>
                             Depto. de Investigación, ITM
                         </h4>
                         <div class="flex flex-col md:flex-row">
                             <div class="w-11/12 md:w-7/12">
                                 <p class="text-green-400">Desarrollador FullStack | Scrum Master</p>
                                 <p class="text-gray-400 text-sm">
-                                    <i class="far fa-calendar-alt fa-sm text-green-400 mr-2"></i> Julio 2024 - Enero 2025 | Por Finalizar
+                                    <i class="far fa-calendar-alt fa-sm text-green-400 mr-2"></i> Julio 2024 - Enero
+                                    2025 | Por Finalizar
                                 </p>
                                 <ul class="list-disc list-inside pl-4 mt-4 text-gray-400">
-                                    <span class="inline-block mb-4">Aplicación Multiplataforma Flutter, Laravel y Livewire.</span>
-                                    <span class="inline-block mb-4">Arquitectura basa en repositorios y Riverpod como gestor de estados.</span>
-                                    <span class="inline-block mb-4">Integra LLM con JSON mode y comunicación con microcontrolador ESP32 via bluetooth.</span>
+                                    <span class="inline-block mb-4">Aplicación Multiplataforma Flutter, Laravel y
+                                        Livewire.</span>
+                                    <span class="inline-block mb-4">Arquitectura basa en repositorios y Riverpod como
+                                        gestor de estados.</span>
+                                    <span class="inline-block mb-4">Integra LLM con JSON mode y comunicación con
+                                        microcontrolador ESP32 via bluetooth.</span>
                                 </ul>
                             </div>
                             <div class="md:w-5/12 px-10 min-h-[200px] flex items-center justify-center">
-                                <img src="assets/images/GlucoLifeStyle.png" 
-                                     alt="ITM Logo" 
-                                     class="object-contain h-52 w-5h-52 rounded-lg">
+                                <img src="assets/images/GlucoLifeStyle.png" alt="ITM Logo"
+                                    class="object-contain h-52 w-5h-52 rounded-lg">
                             </div>
                         </div>
 
@@ -291,19 +346,23 @@
                             <div class="w-11/12 md:w-7/12">
                                 <p class="text-green-400">Desarrollador FullStack</p>
                                 <p class="text-gray-400 text-sm">
-                                    <i class="far fa-calendar-alt fa-sm text-green-400 mr-2"></i> Enero 2024 - Julio 2024 | Finalizado
+                                    <i class="far fa-calendar-alt fa-sm text-green-400 mr-2"></i> Enero 2024 - Julio
+                                    2024 | Finalizado
                                 </p>
                                 <ul class="list-disc list-inside pl-4 mt-4 text-gray-400">
-                                    <span class="inline-block mb-4">Desarrollo de un Multi Login para diferentes plataformas usando Tailwind, JS y Alpine JS.</span>
-                                    <span class="inline-block mb-4">Migración de proyecto productivo a ecosistema Laravel con Livewire.</span>
-                                    <span class="inline-block mb-4">Multiples añadidos a backends desarrollados en PHP.</span>
-                                    <span class="inline-block mb-4">Configuración de repositorios GIT en el servidor de producción.</span>
+                                    <span class="inline-block mb-4">Desarrollo de un Multi Login para diferentes
+                                        plataformas usando Tailwind, JS y Alpine JS.</span>
+                                    <span class="inline-block mb-4">Migración de proyecto productivo a ecosistema
+                                        Laravel con Livewire.</span>
+                                    <span class="inline-block mb-4">Multiples añadidos a backends desarrollados en
+                                        PHP.</span>
+                                    <span class="inline-block mb-4">Configuración de repositorios GIT en el servidor de
+                                        producción.</span>
                                 </ul>
                             </div>
                             <div class="md:w-5/12 px-10 min-h-[200px] flex items-center justify-center">
-                                <img src="assets/images/EAD.png" 
-                                     alt="ITM Logo" 
-                                     class="object-contain h-52 w-5h-52 rounded-lg">
+                                <img src="assets/images/EAD.png" alt="ITM Logo"
+                                    class="object-contain h-52 w-5h-52 rounded-lg">
                             </div>
                         </div>
                         <div class="w-full flex justify-end pr-8">
@@ -326,19 +385,22 @@
                             <div class="w-11/12 md:w-7/12">
                                 <p class="text-green-400">Desarrollador Backend</p>
                                 <p class="text-gray-400 text-sm">
-                                    <i class="far fa-calendar-alt fa-sm text-green-400 mr-2"></i> Marzo 2021 - Agosto 2021 | 
+                                    <i class="far fa-calendar-alt fa-sm text-green-400 mr-2"></i> Marzo 2021 - Agosto
+                                    2021 |
                                     Finalizado
                                 </p>
                                 <ul class="list-disc list-inside pl-4 mt-4 text-gray-400">
-                                    <span class="inline-block mb-4">Desarrollo de plataforma móvil tipo "Delivery" para el Gremio Taxista de la ciudad de Morelia.</span>
-                                    <span class="inline-block mb-4">Utilizando Flutter, Firebase y algunos servicios de Google como "Google Maps".</span>
-                                    <span class="inline-block mb-4">Trabajando en un equipo multidisciplinario usando metodologías agiles y sistemas VSC como Git y Github.</span>
+                                    <span class="inline-block mb-4">Desarrollo de plataforma móvil tipo "Delivery" para
+                                        el Gremio Taxista de la ciudad de Morelia.</span>
+                                    <span class="inline-block mb-4">Utilizando Flutter, Firebase y algunos servicios de
+                                        Google como "Google Maps".</span>
+                                    <span class="inline-block mb-4">Trabajando en un equipo multidisciplinario usando
+                                        metodologías agiles y sistemas VSC como Git y Github.</span>
                                 </ul>
                             </div>
                             <div class="md:w-5/12 px-10 min-h-[200px] flex items-center justify-center">
-                                <img src="assets/images/BTEM.png" 
-                                     alt="BTEM Logo" 
-                                     class="object-contain h-52 w-5h-52 rounded-lg">
+                                <img src="assets/images/BTEM.png" alt="BTEM Logo"
+                                    class="object-contain h-52 w-5h-52 rounded-lg">
                             </div>
                         </div>
                         <div class="w-full flex justify-end pr-8">
@@ -414,7 +476,7 @@
                                 </p>
                                 <ul class="list-disc list-inside pl-4 mt-4 text-gray-400">
                                     <span class="inline-block mb-4">Desarrollo de un SDK de Gemini para Laravel en su
-                                        versión 0.0.3.</span>
+                                        versión 0.1.0.</span>
                                     <span class="inline-block mb-4">Uso de patron de diseño basado en Facades, manejo
                                         avanzado del service provider.</span>
                                 </ul>

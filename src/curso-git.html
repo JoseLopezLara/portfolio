@@ -37,8 +37,8 @@
         <div class="container mx-auto px-4 py-16">
             <!-- -------- NAV BAR -------- -->
             <!-- -------- NAV BAR -------- -->
-            <div class="flex justify-between items-center mb-8">
-                <h1 class="text-3xl font-bold">Curso Git</h1>
+            <div class="flex justify-end items-center mb-8 mr-8">
+                <!-- <h1 class="text-3xl font-bold">Curso Git</h1> -->
                 <a href="../index.html" class="text-green-400 hover:text-white">
                     <i class="fas fa-arrow-left mr-2"></i>Volver
                 </a>
@@ -51,11 +51,15 @@
                 <div class="lg:col-span-2">
                     <div class="bg-gray-800 rounded-lg p-6 shadow-lg mb-6">
 
+
                         <!-- Video Container -->
+                        <h2 class="text-2xl font-bold mb-7">Masterclass Git: Inicia a trabajar en colaborativo</h2>
+
                         <div class="bg-gray-800 rounded-lg -m-2 overflow-hidden shadow-sm mb-6">
                             <div class="relative w-full" style="padding-top: 56.25%;">
                                 <iframe class="absolute top-0 left-0 w-full h-full"
-                                    src="https://www.youtube.com/embed/3DMOBCdM-wA?enablejsapi=1" title="Curso Git" frameborder="0"
+                                    src="https://www.youtube.com/embed/3DMOBCdM-wA?enablejsapi=1" title="Curso Git"
+                                    frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowfullscreen>
                                 </iframe>
@@ -63,7 +67,7 @@
                         </div>
 
                         <!-- Video Info -->
-                        <h2 class="text-2xl font-bold mb-4">Masterclass Git: De Junior a Senior</h2>
+
                         <div class="flex flex-wrap gap-4 mb-4 text-sm text-gray-400">
                             <span class="flex items-center">
                                 <i class="far fa-clock mr-2 text-green-400"></i>
@@ -79,10 +83,13 @@
                             </span>
                         </div>
                         <p class="text-gray-400 mb-6">
-                            Curso práctico 
-                            "Git, GitHub y Gitflow | Curso Práctico para el Trabajo en Colaborativo desde CERO para PRINCIPIANTES | 2025", 
-                            donde aprenderás desde lo más básico hasta técnicas intermedias para gestionar proyectos en equipo. 
-                            Descubre cómo dominar Git Flow, asegurar tu cuenta con SSH y resolver conflictos de manera profesional
+                            Curso práctico
+                            "Git, GitHub y Gitflow | Curso Práctico para el Trabajo en Colaborativo desde CERO para
+                            PRINCIPIANTES | 2025",
+                            donde aprenderás desde lo más básico hasta técnicas intermedias para gestionar proyectos en
+                            equipo.
+                            Descubre cómo dominar Git Flow, asegurar tu cuenta con SSH y resolver conflictos de manera
+                            profesional
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-gray-700 rounded-full text-green-400 text-sm">
@@ -100,6 +107,26 @@
 
                 <!-- Content Table -->
                 <div class="lg:col-span-1">
+                    <!--Main advice-->
+                    <div
+                        class="flex flex-col w-full  border-4 border-yellow-800 border-opacity-50 bg-yellow-800 bg-opacity-10 p-6 mb-6 shadow-2xl px-4 py-2 text-green-400 rounded-lg">
+                        <!-- Git Training Section -->
+                        <h4
+                            class="text-white underline underline-offset-4 font-extrabold shadow-2xl  text-base mb-2 flex items-center justify-center">
+                            <i class="fab fa-git-alt mr-2 "></i>
+                            Asesorías Git
+                        </h4>
+                        <div class="pl-4 text-start mb-2 ">
+                            <p class="text-sm font-semibold text-gray-300">Capacitación Git para individuos y
+                                equipos</p>
+                            <div class="text-sm mt-4 space-y-0.5 text-gray-400 items-start flex flex-col">
+                                <p class=""><i class="fas fa-user mr-2 "></i>Individual: $12
+                                    USD/hora</p>
+                                <p class=""><i class="fas fa-users mr-2"></i>Equipos: Precio
+                                    por contacto</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="bg-gray-800 rounded-lg shadow-lg p-6">
                         <h3 class="text-xl font-bold mb-4 flex items-center">
                             <i class="fas fa-list-ul text-green-400 mr-2"></i>
@@ -107,59 +134,68 @@
                         </h3>
                         <div class="space-y-4">
                             <!-- Content Items -->
-                            <a href="#" @click.prevent="seekTo('0:00')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                            <a href="#" @click.prevent="seekTo('0:00')"
+                                class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
                                 <div class="flex justify-between items-start">
                                     <div class="flex items-start">
                                         <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
                                         <div>
-                                            <h4 class="font-medium">🌿 Git Flow: La Base del Éxito</h4>
-                                            <p class="text-sm text-gray-400">Domina el flujo de trabajo que usan los profesionales</p>
+                                            <h4 class="font-medium">🌿 Git Flow: Trabajo Colaborativo</h4>
+                                            <p class="text-sm text-gray-400">Domina el flujo de trabajo que usan los
+                                                profesionales</p>
                                         </div>
                                     </div>
                                     <span class="text-sm text-gray-400">0:00</span>
                                 </div>
                             </a>
 
-                            <a href="#" @click.prevent="seekTo('49:59')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                            <a href="#" @click.prevent="seekTo('49:59')"
+                                class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
                                 <div class="flex justify-between items-start">
                                     <div class="flex items-start">
                                         <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
                                         <div>
                                             <h4 class="font-medium">🔐 Securiza tu GitHub</h4>
-                                            <p class="text-sm text-gray-400">Configura SSH para una conexión segura y eficiente</p>
+                                            <p class="text-sm text-gray-400">Configura SSH para una conexión segura y
+                                                eficiente</p>
                                         </div>
                                     </div>
                                     <span class="text-sm text-gray-400">49:59</span>
                                 </div>
                             </a>
 
-                            <a href="#" @click.prevent="seekTo('1:17:58')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                            <a href="#" @click.prevent="seekTo('77:58')"
+                                class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
                                 <div class="flex justify-between items-start">
                                     <div class="flex items-start">
                                         <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
                                         <div>
-                                            <h4 class="font-medium">📥 Clonación Profesional</h4>
-                                            <p class="text-sm text-gray-400">Inicia tu feature branch como un experto</p>
+                                            <h4 class="font-medium">📥 Clona tu primer repositorio</h4>
+                                            <p class="text-sm text-gray-400">Inicia a trabajar en tu propia feature
+                                                branch</p>
                                         </div>
                                     </div>
                                     <span class="text-sm text-gray-400">1:17:58</span>
                                 </div>
                             </a>
 
-                            <a href="#" @click.prevent="seekTo('1:28:54')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                            <a href="#" @click.prevent="seekTo('88:54')"
+                                class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
                                 <div class="flex justify-between items-start">
                                     <div class="flex items-start">
                                         <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
                                         <div>
-                                            <h4 class="font-medium">💻 Workflow en Acción</h4>
-                                            <p class="text-sm text-gray-400">Técnicas para mantener tu progreso seguro</p>
+                                            <h4 class="font-medium">💻 Aplica el Workflow de manera practica</h4>
+                                            <p class="text-sm text-gray-400">Técnicas para mantener tu progreso seguro
+                                            </p>
                                         </div>
                                     </div>
                                     <span class="text-sm text-gray-400">1:28:54</span>
                                 </div>
                             </a>
 
-                            <a href="#" @click.prevent="seekTo('1:33:42')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                            <a href="#" @click.prevent="seekTo('93:42')"
+                                class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
                                 <div class="flex justify-between items-start">
                                     <div class="flex items-start">
                                         <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
@@ -172,7 +208,8 @@
                                 </div>
                             </a>
 
-                            <a href="#" @click.prevent="seekTo('1:41:26')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                            <a href="#" @click.prevent="seekTo('101:26')"
+                                class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
                                 <div class="flex justify-between items-start">
                                     <div class="flex items-start">
                                         <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
@@ -185,7 +222,8 @@
                                 </div>
                             </a>
 
-                            <a href="#" @click.prevent="seekTo('1:51:48')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                            <a href="#" @click.prevent="seekTo('111:48')"
+                                class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
                                 <div class="flex justify-between items-start">
                                     <div class="flex items-start">
                                         <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
@@ -198,13 +236,29 @@
                                 </div>
                             </a>
 
-                            <a href="#" @click.prevent="seekTo('2:04:45')" class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                            <a href="#" @click.prevent="seekTo('120:22')"
+                                class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
                                 <div class="flex justify-between items-start">
                                     <div class="flex items-start">
                                         <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
                                         <div>
-                                            <h4 class="font-medium">🎯 Resolución Maestra</h4>
-                                            <p class="text-sm text-gray-400">Domina la solución de conflictos como un pro</p>
+                                            <h4 class="font-medium">🤡 Momento gracioso 🤡</h4>
+                                            <p class="text-sm text-gray-400">Cuando un programador tiene su primer conflicto</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-400">2:00:22</span>
+                                </div>
+                            </a>
+
+                            <a href="#" @click.prevent="seekTo('124:45')"
+                                class="block p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                                <div class="flex justify-between items-start">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-play-circle text-green-400 mt-1 mr-2"></i>
+                                        <div>
+                                            <h4 class="font-medium">🎯 Soluciona conflictos de mergin</h4>
+                                            <p class="text-sm text-gray-400">Domina la solución de conflictos como un
+                                                pro</p>
                                         </div>
                                     </div>
                                     <span class="text-sm text-gray-400">2:04:45</span>
